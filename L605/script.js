@@ -9,8 +9,17 @@ var students = [
 
 
 function displayStudentsTable(studentList){
-    //write code
+    var html = "<table border='1|1'>";
+for (var i = 0; i < students.length; i++) {
+    html+="<tr>";
+    html+="<td>"+students[i].FirstName+"</td>";
+    html+="<td>"+students[i].LastName+"</td>";
+    html+="<td>"+students[i].PersonalNumber+"</td>";
+
+    html+="</tr>";
+
 }
-
-
-displayStudentsTable(studens);
+html+="</table>";
+document.getElementById("student-list").innerHTML = html;
+}
+displayStudentsTable(students);
